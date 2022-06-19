@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import java.util.*;
 public class MyList implements OwnList {
 
     List<Integer> ownList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
@@ -17,23 +14,32 @@ public class MyList implements OwnList {
     }
 
     @Override
-    public void add(Integer element) {
+    public void add(Integer element) throws ArrayIndexOutOfBoundsException {
         ownList.add(element);
     }
 
     @Override
-    public Integer get(int i) {
+    public Integer get(int i) throws ArrayIndexOutOfBoundsException {
         return ownList.get(i);
     }
 
     @Override
-    public void add(int index, Integer element) {
+    public void add(int index, Integer element) throws ArrayIndexOutOfBoundsException {
         ownList.add(index, element);
     }
 
     @Override
-    public Integer remove(int index) {
-        return ownList.remove(index);
+    public void remove(int index) throws ArrayIndexOutOfBoundsException {
+        List<Integer> newList = new ArrayList<>(new HashSet<>(ownList));
+
+        for (Integer integer : ownList) {
+            if (newList.contains(integer)) {
+                ownList.remove(index);
+            }
+        }
+
     }
 
 }
+
+

@@ -10,6 +10,6 @@ public interface OwnList {
 
     void add(int index, Integer element);
 
-    Integer remove(int index);
+    void remove(int index);
 
 }
