@@ -1,7 +1,7 @@
 import java.util.*;
 public class MyList implements OwnList {
 
-    List<Integer> ownList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+    List<Integer> ownList = new ArrayList<>();
 
     @Override
     public int size() {
