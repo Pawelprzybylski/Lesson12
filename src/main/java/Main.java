@@ -1,11 +1,21 @@
+import java.util.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        Names names = new Names();
 
-        System.out.println("Lista " + names.listOfNames);
-        System.out.println("Lista bez duplikatów " + names.listWithoutDuplicate);
-        names.printListAfterChanges("Anna", "Joanna");
+        List<String> listOfNames = new ArrayList<>(Arrays.asList("Anna", "Katarzyna", "Tymon", "Tadeusz", "Anna", "Karolina", "Dorota", "Piotr"));
+        System.out.println("Lista wejściowa " + listOfNames);
+
+        Set<String> listWithoutDuplicate = new HashSet<>(listOfNames);
+        System.out.println("Lista bez duplikatów: " + listWithoutDuplicate);
+
+        Collections.reverse(listOfNames);
+        System.out.println("Elementy w odwrotnej kolejności " + listOfNames);
+
+        List<String> listAfterChanges = new ArrayList<>(listOfNames);
+        Collections.replaceAll(listAfterChanges, "Anna", "Joanna");
+        System.out.println("Elementy po zmianie: Anna-> Joanna: " + "\n" + listAfterChanges);
 
     }
 
