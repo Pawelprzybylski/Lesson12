@@ -1,4 +1,4 @@
-public class Person implements Comparable<Person> {
+public class Person {
 
     private String name;
     private String surname;
@@ -54,9 +54,5 @@ public class Person implements Comparable<Person> {
         this.weight = weight;
     }
 
-    @Override
-    public int compareTo(Person o) {
-        return Integer.compare(this.yearBrith, o.yearBrith);
-    }
 
 }
