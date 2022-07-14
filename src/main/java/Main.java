@@ -13,9 +13,8 @@ public class Main {
         Collections.reverse(listOfNames);
         System.out.println("Elementy w odwrotnej kolejności " + listOfNames);
 
-        List<String> listAfterChanges = new ArrayList<>(listOfNames);
-        Collections.replaceAll(listAfterChanges, "Anna", "Joanna");
-        System.out.println("Elementy po zmianie: Anna-> Joanna: " + "\n" + listAfterChanges);
+        Collections.replaceAll(listOfNames, "Anna", "Joanna");
+        System.out.println("Elementy po zmianie: Anna-> Joanna: " + "\n" + listOfNames);
 
     }
 
