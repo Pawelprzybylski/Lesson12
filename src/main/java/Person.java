@@ -1,4 +1,4 @@
-public class Person {
+public class Person implements Comparable<Person>{
 
     private String name;
     private String surname;
@@ -54,5 +54,19 @@ public class Person {
         this.weight = weight;
     }
 
+    @Override
+    public int compareTo(Person person) {
+        return Integer.compare(person.getYearBrith(), this.getYearBrith());
+    }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", yearBrith=" + yearBrith +
+                ", height=" + height +
+                ", weight=" + weight +
+                '}';
+    }
 }
