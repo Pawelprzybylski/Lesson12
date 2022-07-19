@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<String> listOfNames = new ArrayList<>(Arrays.asList("Anna", "Katarzyna", "Tymon", "Tadeusz", "Anna", "Karolina", "Dorota", "Piotr"));
+        List<String> listOfNames = (Arrays.asList("Anna", "Katarzyna", "Tymon", "Tadeusz", "Anna", "Karolina", "Dorota", "Piotr"));
         System.out.println("Lista wejściowa " + listOfNames);
 
         Set<String> listWithoutDuplicate = new HashSet<>(listOfNames);
